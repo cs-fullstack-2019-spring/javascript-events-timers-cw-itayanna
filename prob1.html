@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="checkbox" id="trap">
+    <lable for="trap">DO NOT CLICK THIS BOX!</lable>
+</form>
+
+<script>
+    let alarm= false;
+    let box= document.getElementById('trap');
+
+    box.addEventListener('click', function (e) {
+        if(!alarm){
+            e.preventDefault()
+            alert('I TOLD YOU NOT TO CLICK IT!!')
+        }
+
+    })
+</script>
+</body>
+</html>

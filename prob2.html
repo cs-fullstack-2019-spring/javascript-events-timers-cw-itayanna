@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <textarea id="ta" cols="30" rows="10" disabled></textarea>
+    <button id="btn">
+        Allow Typing
+    </button>
+</form>
+
+<script>
+    let typeON= document.getElementById('btn');
+    let onOff= false;
+    let textarea= document.getElementById('ta');
+
+    typeON.addEventListener('click', function (e) {
+        e.preventDefault();
+        console.log(onOff);
+        if(!onOff){
+            onOff=true
+        }
+        else {
+            textarea.setAttribute('disable','');
+            onOff=false;
+
+        }
+
+    })
+</script>
+
+
+</body>
+</html>
